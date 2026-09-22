@@ -811,12 +811,6 @@ export const HomePage: React.FC = () => {
                 >
                   Buat Akun Gratis Sekarang
                 </Link>
-                <Link
-                  className="px-8 py-4 rounded-full bg-white text-slate-900 font-bold text-sm shadow-xl hover:bg-slate-100 hover:scale-105 transition-all duration-300"
-                  href="/setup"
-                >
-                  Atur Tenant / App Key
-                </Link>
               </div>
             </div>
           </ScrollReveal>

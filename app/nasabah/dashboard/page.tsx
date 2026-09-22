@@ -166,7 +166,10 @@ export default function NasabahDashboardPage() {
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs text-emerald-200/90 font-medium">
+                  <span
+                    className="text-xs text-emerald-200/90 font-medium"
+                    suppressHydrationWarning
+                  >
                     {greetingTime},
                   </span>
                   <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-400/20 text-emerald-200 text-[10px] font-bold border border-emerald-300/30">
@@ -184,7 +187,10 @@ export default function NasabahDashboardPage() {
             </div>
 
             <div className="flex items-center gap-2.5 self-start sm:self-auto">
-              <span className="px-3 py-1 rounded-full bg-black/20 backdrop-blur-md text-emerald-200 font-mono text-xs font-semibold border border-white/10">
+              <span
+                className="px-3 py-1 rounded-full bg-black/20 backdrop-blur-md text-emerald-200 font-mono text-xs font-semibold border border-white/10"
+                suppressHydrationWarning
+              >
                 {nasabahId}
               </span>
               <Link
@@ -208,7 +214,10 @@ export default function NasabahDashboardPage() {
                 className="flex items-baseline gap-2.5 mt-1"
                 suppressHydrationWarning
               >
-                <span className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-sm">
+                <span
+                  className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-sm"
+                  suppressHydrationWarning
+                >
                   {Number(saldoPoin).toLocaleString('id-ID')}
                 </span>
                 <span className="text-xl sm:text-2xl font-extrabold text-emerald-200">

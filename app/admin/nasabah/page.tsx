@@ -131,6 +131,60 @@ export default function AdminNasabahPage() {
     setIsEditOpen(true);
   };
 
+  const handleEditFotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (file.size > 2 * 1024 * 1024) {
+        showToast('Ukuran foto maksimal 2MB', 'error');
+        return;
+      }
+      if (!file.type.startsWith('image/')) {
+        showToast('File harus berupa gambar (PNG, JPG, WEBP)', 'error');
+        return;
+      }
+      setEditForm((prev) => ({
+        ...prev,
+        foto: file,
+        fotoPreview: URL.createObjectURL(file),
+      }));
+    }
+  };
+
+  const handleRemoveEditFoto = () => {
+    setEditForm((prev) => ({
+      ...prev,
+      foto: null,
+      fotoPreview: '',
+    }));
+  };
+
+  const handleCreateFotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (file.size > 2 * 1024 * 1024) {
+        showToast('Ukuran foto maksimal 2MB', 'error');
+        return;
+      }
+      if (!file.type.startsWith('image/')) {
+        showToast('File harus berupa gambar (PNG, JPG, WEBP)', 'error');
+        return;
+      }
+      setCreateForm((prev) => ({
+        ...prev,
+        foto: file,
+        fotoPreview: URL.createObjectURL(file),
+      }));
+    }
+  };
+
+  const handleRemoveCreateFoto = () => {
+    setCreateForm((prev) => ({
+      ...prev,
+      foto: null,
+      fotoPreview: '',
+    }));
+  };
+
   // Handle Edit Submit
   const handleEditSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -389,6 +443,57 @@ export default function AdminNasabahPage() {
             </div>
 
             <form onSubmit={handleCreateSubmit} className="flex flex-col gap-4">
+              {/* Foto Profil Nasabah (Opsional) */}
+              <div className="flex flex-col items-center justify-center gap-2 pb-1">
+                <div className="relative group cursor-pointer">
+                  <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-dashed border-emerald-300 flex items-center justify-center bg-emerald-50 text-[#006948] shadow-xs">
+                    {createForm.fotoPreview ? (
+                      <img
+                        src={createForm.fotoPreview}
+                        alt="Foto Nasabah"
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <User className="w-9 h-9 stroke-[1.8]" />
+                    )}
+                  </div>
+                  <label
+                    htmlFor="create-nasabah-foto"
+                    className="absolute inset-0 flex flex-col items-center justify-center rounded-full bg-black/45 text-white opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+                  >
+                    <Camera className="w-5 h-5" />
+                    <span className="text-[10px] font-bold mt-0.5">Unggah</span>
+                  </label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <label
+                    htmlFor="create-nasabah-foto"
+                    className="text-xs font-bold text-[#006948] hover:underline cursor-pointer"
+                  >
+                    Tambah Foto (Opsional)
+                  </label>
+                  {createForm.fotoPreview && (
+                    <>
+                      <span className="text-slate-300">•</span>
+                      <button
+                        type="button"
+                        onClick={handleRemoveCreateFoto}
+                        className="text-xs font-bold text-rose-600 hover:underline cursor-pointer"
+                      >
+                        Hapus
+                      </button>
+                    </>
+                  )}
+                </div>
+                <input
+                  id="create-nasabah-foto"
+                  type="file"
+                  accept="image/png,image/jpeg,image/jpg,image/webp"
+                  onChange={handleCreateFotoChange}
+                  className="hidden"
+                />
+              </div>
+
               <div className="flex flex-col gap-1">
                 <label className="text-xs font-bold text-slate-700">Nama Lengkap Nasabah</label>
                 <input
@@ -497,6 +602,57 @@ export default function AdminNasabahPage() {
             </div>
 
             <form onSubmit={handleEditSubmit} className="flex flex-col gap-4">
+              {/* Foto Profil Nasabah */}
+              <div className="flex flex-col items-center justify-center gap-2 pb-1">
+                <div className="relative group cursor-pointer">
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-dashed border-emerald-300 flex items-center justify-center bg-emerald-50 text-[#006948] shadow-xs">
+                    {editForm.fotoPreview ? (
+                      <img
+                        src={editForm.fotoPreview}
+                        alt="Foto Nasabah"
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <User className="w-10 h-10 stroke-[1.8]" />
+                    )}
+                  </div>
+                  <label
+                    htmlFor="edit-nasabah-foto"
+                    className="absolute inset-0 flex flex-col items-center justify-center rounded-full bg-black/45 text-white opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+                  >
+                    <Camera className="w-6 h-6" />
+                    <span className="text-[10px] font-bold mt-1">Ubah Foto</span>
+                  </label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <label
+                    htmlFor="edit-nasabah-foto"
+                    className="text-xs font-bold text-[#006948] hover:underline cursor-pointer"
+                  >
+                    Pilih Foto Profil
+                  </label>
+                  {editForm.fotoPreview && (
+                    <>
+                      <span className="text-slate-300">•</span>
+                      <button
+                        type="button"
+                        onClick={handleRemoveEditFoto}
+                        className="text-xs font-bold text-rose-600 hover:underline cursor-pointer"
+                      >
+                        Hapus Foto
+                      </button>
+                    </>
+                  )}
+                </div>
+                <input
+                  id="edit-nasabah-foto"
+                  type="file"
+                  accept="image/png,image/jpeg,image/jpg,image/webp"
+                  onChange={handleEditFotoChange}
+                  className="hidden"
+                />
+              </div>
+
               <div className="flex flex-col gap-1">
                 <label className="text-xs font-bold text-slate-700">Nama Lengkap</label>
                 <input

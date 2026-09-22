@@ -52,7 +52,7 @@ export function Navbar({ onToggleSidebar }: { onToggleSidebar?: () => void }) {
     : user?.adminBank?.namaPengelola || user?.adminBank?.namaUnit || user?.username || 'A';
 
   return (
-    <header className="fixed top-0 left-0 md:left-[350px] right-0 h-20 bg-white/90 backdrop-blur-xl border-b border-slate-100 shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-4 sm:px-8 transition-all">
+    <header className="fixed top-0 left-0 md:left-[290px] right-0 h-20 bg-white/90 backdrop-blur-xl border-b border-slate-100 shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-4 sm:px-8 transition-all">
       {/* Left: Mobile Toggle & Brand (if guest) */}
       <div className="flex items-center gap-3 shrink-0 relative z-10">
         {isDashboard && (

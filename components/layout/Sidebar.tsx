@@ -108,25 +108,25 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Sidebar Container: Fixed at left-0, 100vh, pure white background */}
       <aside
         className={cn(
-          'fixed inset-y-0 left-0 z-50 w-[350px] h-screen bg-white border-r border-slate-100 shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between transition-transform duration-200 md:translate-x-0',
+          'fixed inset-y-0 left-0 z-50 w-[290px] h-screen bg-white border-r border-slate-100 shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between transition-transform duration-200 md:translate-x-0',
           isOpen ? 'translate-x-0' : '-translate-x-full'
         )}
       >
         <div className="flex flex-col flex-1 overflow-y-auto">
           {/* Brand Header */}
-          <div className="p-6 pb-5 flex items-center justify-between">
-            <Link href={targetHref} className="flex items-center gap-3.5 group">
-              <div className="w-[52px] h-[52px] rounded-2xl bg-[#006948] flex items-center justify-center text-white shadow-md shadow-emerald-700/20 group-hover:scale-105 transition-transform shrink-0">
-                <Leaf className="w-7 h-7 text-emerald-300 stroke-[2.3]" />
+          <div className="p-5 pb-4 flex items-center justify-between">
+            <Link href={targetHref} className="flex items-center gap-3 group">
+              <div className="w-11 h-11 rounded-2xl bg-[#006948] flex items-center justify-center text-white shadow-md shadow-emerald-700/20 group-hover:scale-105 transition-transform shrink-0">
+                <Leaf className="w-6 h-6 text-emerald-300 stroke-[2.3]" />
               </div>
               <div className="flex flex-col min-w-0">
-                <span className="font-extrabold text-xl text-slate-900 leading-tight flex items-center gap-2">
+                <span className="font-extrabold text-lg text-slate-900 leading-tight flex items-center gap-1.5">
                   Bank Sampah
-                  <span className="text-[#00714e] font-bold text-xs px-2.5 py-0.5 rounded-full bg-[#64f9bc]/40">
+                  <span className="text-[#00714e] font-bold text-[11px] px-2 py-0.5 rounded-full bg-[#64f9bc]/40">
                     {roleText}
                   </span>
                 </span>
-                <span className="font-bold text-xs text-slate-400 uppercase tracking-wider mt-0.5">
+                <span className="font-bold text-[11px] text-slate-400 uppercase tracking-wider mt-0.5">
                   {roleSubText}
                 </span>
               </div>
@@ -142,14 +142,14 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           </div>
 
           {/* Section Label: MENU UTAMA */}
-          <div className="px-6 mb-3">
-            <span className="font-bold text-xs text-slate-400 uppercase tracking-wider">
+          <div className="px-5 mb-2.5">
+            <span className="font-bold text-[11px] text-slate-400 uppercase tracking-wider">
               MENU UTAMA
             </span>
           </div>
 
           {/* Navigation Items (Pill Style) */}
-          <nav className="flex-1 px-5 py-1 space-y-2">
+          <nav className="flex-1 px-4 py-1 space-y-1.5">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = item.href === activeHref;
@@ -160,16 +160,16 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   href={item.href}
                   onClick={onClose}
                   className={cn(
-                    'group flex items-center justify-between px-4.5 py-3.5 rounded-full transition-all text-[15px] font-bold',
+                    'group flex items-center justify-between px-4 py-3 rounded-full transition-all text-sm font-bold',
                     isActive
                       ? 'bg-[#006948] text-white shadow-sm'
                       : 'text-slate-600 hover:bg-[#eaedff]/60 hover:text-slate-900'
                   )}
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-3.5">
                     <Icon
                       className={cn(
-                        'w-[22px] h-[22px] transition-colors shrink-0',
+                        'w-5 h-5 transition-colors shrink-0',
                         isActive ? 'text-emerald-200' : 'text-slate-400 group-hover:text-slate-700'
                       )}
                     />
@@ -179,7 +179,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   {item.badge ? (
                     <span
                       className={cn(
-                        'px-2.5 py-0.5 rounded-full text-xs font-bold',
+                        'px-2 py-0.5 rounded-full text-xs font-bold',
                         isActive
                           ? 'bg-white/20 text-emerald-100'
                           : 'bg-[#64f9bc]/40 text-[#00714e]'
@@ -188,7 +188,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                       {item.badge}
                     </span>
                   ) : isActive ? (
-                    <ChevronRight className="w-5 h-5 text-emerald-200 shrink-0" />
+                    <ChevronRight className="w-4.5 h-4.5 text-emerald-200 shrink-0" />
                   ) : null}
                 </Link>
               );
@@ -198,31 +198,31 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
         {/* Bottom User Profile Card */}
         {(isNasabah || isAdmin || Boolean(user)) && (
-          <div className="p-5 border-t border-slate-100 bg-white">
-            <div className="p-4 rounded-2xl bg-[#f2f3ff]/70 border border-slate-100 flex items-center justify-between shadow-xs">
+          <div className="p-4 border-t border-slate-100 bg-white">
+            <div className="p-3.5 rounded-2xl bg-[#f2f3ff]/70 border border-slate-100 flex items-center justify-between shadow-xs">
               <Link
                 href={isAdmin ? '/admin/profil' : '/nasabah/akun'}
                 onClick={onClose}
                 title={isAdmin ? 'Profil Unit' : 'Akun Saya'}
-                className="flex items-center gap-3.5 min-w-0 group cursor-pointer"
+                className="flex items-center gap-3 min-w-0 group cursor-pointer"
               >
                 <div className="relative shrink-0">
                   <div
-                    className="w-12 h-12 rounded-full bg-[#006948] text-white flex items-center justify-center font-bold text-base shadow-xs group-hover:scale-105 transition-transform"
+                    className="w-10 h-10 rounded-full bg-[#006948] text-white flex items-center justify-center font-bold text-sm shadow-xs group-hover:scale-105 transition-transform"
                     suppressHydrationWarning
                   >
                     {displayName.charAt(0).toUpperCase()}
                   </div>
-                  <span className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-500 ring-2 ring-white" />
+                  <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-white" />
                 </div>
                 <div className="flex flex-col min-w-0">
                   <span
-                    className="font-bold text-[15px] text-slate-800 truncate group-hover:text-[#006948] transition-colors"
+                    className="font-bold text-sm text-slate-800 truncate group-hover:text-[#006948] transition-colors"
                     suppressHydrationWarning
                   >
                     {displayName}
                   </span>
-                  <span className="text-xs text-slate-400 truncate">
+                  <span className="text-[11px] text-slate-400 truncate">
                     {roleLabel}
                   </span>
                 </div>
@@ -231,9 +231,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               <button
                 onClick={logout}
                 title="Keluar / Logout"
-                className="w-9 h-9 rounded-full flex items-center justify-center text-slate-400 hover:bg-rose-50 hover:text-rose-600 transition-colors shrink-0 cursor-pointer"
+                className="w-8 h-8 rounded-full flex items-center justify-center text-slate-400 hover:bg-rose-50 hover:text-rose-600 transition-colors shrink-0 cursor-pointer"
               >
-                <LogOut className="w-4.5 h-4.5" />
+                <LogOut className="w-4 h-4" />
               </button>
             </div>
           </div>

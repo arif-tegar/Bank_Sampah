@@ -39,9 +39,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       )}
 
-      {/* Content wrapper with md:pl-[350px] when sidebar is active */}
-      <div className={cn('min-h-screen flex flex-col', isDashboardRoute ? 'md:pl-[350px]' : '')}>
-        {/* Navbar - fixed top-0 left-0 md:left-[350px] right-0 (z-40) */}
+      {/* Content wrapper with md:pl-[290px] when sidebar is active */}
+      <div className={cn('min-h-screen flex flex-col', isDashboardRoute ? 'md:pl-[290px]' : '')}>
+        {/* Navbar - fixed top-0 left-0 md:left-[290px] right-0 (z-40) */}
         <Navbar onToggleSidebar={() => setSidebarOpen((prev) => !prev)} />
 
         {/* Main Content: pt-28 offsets fixed 80px navbar with 32px top margin */}

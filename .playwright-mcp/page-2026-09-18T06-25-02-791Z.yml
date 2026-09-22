@@ -1,0 +1,195 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "Bank Sampah Digital Eco-Waste Management" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e11]:
+            - generic [ref=e12]:
+              - text: Bank Sampah
+              - generic [ref=e13]: Digital
+            - paragraph [ref=e14]: Eco-Waste Management
+        - generic [ref=e15]:
+          - button "Seed Data" [ref=e16] [cursor=pointer]
+          - generic [ref=e22]:
+            - link [ref=e23] [cursor=pointer]:
+              - /url: /login
+              - button "Masuk" [ref=e24]
+            - link [ref=e26] [cursor=pointer]:
+              - /url: /register
+              - button "Daftar" [ref=e27]
+    - main [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - generic [ref=e35]: Panel Pengelola Bank Sampah
+              - generic [ref=e37]: "Unit ID: #ASR-041"
+            - heading "Bank Sampah Asri Jaya" [level=1] [ref=e38]
+            - generic [ref=e39]:
+              - generic [ref=e40]:
+                - text: "Pengelola:"
+                - strong [ref=e45]: Bpk. H. Sukirman
+              - generic [ref=e46]: •
+              - generic [ref=e47]:
+                - text: "Kontak:"
+                - generic [ref=e50]: +62 812-3456-7890
+          - link "Verifikasi Setoran" [ref=e52] [cursor=pointer]:
+            - /url: /admin/setoran
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: Total Nasabah
+            - generic [ref=e66]:
+              - generic [ref=e67]:
+                - generic [ref=e68]: "248"
+                - generic [ref=e69]: +12%
+              - paragraph [ref=e73]: Terdaftar aktif
+          - generic [ref=e74]:
+            - generic [ref=e75]: Sampah Terkumpul
+            - generic [ref=e82]:
+              - generic [ref=e83]: 15 kg
+              - paragraph [ref=e85]: Total tonase terkelola
+          - generic [ref=e86]:
+            - generic [ref=e87]: Poin Beredar
+            - generic [ref=e93]:
+              - generic [ref=e94]: 150 Poin
+              - paragraph [ref=e96]: Insentif bagi nasabah
+          - generic [ref=e97]:
+            - generic [ref=e98]: Transaksi Setor
+            - generic [ref=e104]:
+              - generic [ref=e105]:
+                - generic [ref=e106]: "1"
+                - generic [ref=e107]: Hari Ini
+              - paragraph [ref=e108]: Pengajuan diproses
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - generic [ref=e111]: Pintasan Menu Cepat
+            - generic [ref=e112]: Akses cepat modul utama
+          - generic [ref=e113]:
+            - link "Data Nasabah Kelola data nasabah" [ref=e114] [cursor=pointer]:
+              - /url: /admin/nasabah
+              - generic [ref=e122]:
+                - generic [ref=e123]: Data Nasabah
+                - generic [ref=e124]: Kelola data nasabah
+            - link "Kategori Sampah Harga & poin/kg" [ref=e128] [cursor=pointer]:
+              - /url: /admin/kategori-sampah
+              - generic [ref=e135]:
+                - generic [ref=e136]: Kategori Sampah
+                - generic [ref=e137]: Harga & poin/kg
+            - link "Katalog Hadiah Voucher & stok hadiah" [ref=e141] [cursor=pointer]:
+              - /url: /admin/hadiah
+              - generic [ref=e148]:
+                - generic [ref=e149]: Katalog Hadiah
+                - generic [ref=e150]: Voucher & stok hadiah
+            - link "Rekapitulasi Laporan tonase & transaksi" [ref=e154] [cursor=pointer]:
+              - /url: /admin/rekapitulasi
+              - generic [ref=e160]:
+                - generic [ref=e161]: Rekapitulasi
+                - generic [ref=e162]: Laporan tonase & transaksi
+        - generic [ref=e166]:
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - generic [ref=e169]:
+                - generic [ref=e175]:
+                  - heading "Antrean Setoran Menunggu Verifikasi" [level=2] [ref=e176]
+                  - paragraph [ref=e177]: Setoran limbah fisik masuk yang siap ditimbang dan diverifikasi staf
+                - link "Lihat Semua Antrean" [ref=e178] [cursor=pointer]:
+                  - /url: /admin/setoran
+              - generic [ref=e182]:
+                - generic [ref=e183]:
+                  - generic [ref=e190]:
+                    - generic [ref=e191]:
+                      - generic [ref=e192]: "#SET-9498C6"
+                      - generic [ref=e193]: Menunggu Konfirmasi
+                    - generic [ref=e195]:
+                      - generic [ref=e196]: 18 Sep 2026
+                      - generic [ref=e199]: •
+                      - generic [ref=e200]:
+                        - text: "Nasabah:"
+                        - strong [ref=e201]: Budi Santoso
+                    - generic [ref=e202]:
+                      - generic [ref=e203]: Plastik & Botol
+                      - generic [ref=e204]: ~4.5 Kg
+                  - button "Timbang & Verifikasi" [ref=e206] [cursor=pointer]
+                - generic [ref=e212]:
+                  - generic [ref=e219]:
+                    - generic [ref=e220]:
+                      - generic [ref=e221]: "#SET-9498C7"
+                      - generic [ref=e222]: Menunggu Konfirmasi
+                    - generic [ref=e224]:
+                      - generic [ref=e225]: 18 Sep 2026
+                      - generic [ref=e228]: •
+                      - generic [ref=e229]:
+                        - text: "Nasabah:"
+                        - strong [ref=e230]: Siti Rahmawati
+                    - generic [ref=e231]:
+                      - generic [ref=e232]: Kardus & Kertas
+                      - generic [ref=e233]: ~12 Kg
+                  - button "Timbang & Verifikasi" [ref=e235] [cursor=pointer]
+              - group [ref=e242]:
+                - generic "Lihat kondisi antrean kosong ▼" [ref=e243] [cursor=pointer]:
+                  - generic [ref=e244]: Lihat kondisi antrean kosong
+                  - generic [ref=e247]: ▼
+            - generic [ref=e248]:
+              - generic [ref=e249]:
+                - heading "Riwayat Verifikasi Terakhir" [level=3] [ref=e255]
+                - generic [ref=e256]: 24 Jam Terakhir
+              - table [ref=e258]:
+                - rowgroup [ref=e259]:
+                  - row [ref=e260]:
+                    - columnheader "Tiket" [ref=e261]
+                    - columnheader "Nasabah" [ref=e262]
+                    - columnheader "Kategori" [ref=e263]
+                    - columnheader "Berat Bersih" [ref=e264]
+                    - columnheader "Nilai Kredit" [ref=e265]
+                    - columnheader "Status" [ref=e266]
+                - rowgroup [ref=e267]:
+                  - row [ref=e268]:
+                    - cell "#SET-9498B2" [ref=e269]
+                    - cell "Dewi Lestari" [ref=e270]
+                    - cell "PET Botol Bening" [ref=e271]
+                    - cell "3.2 Kg" [ref=e272]
+                    - cell "Rp 11.200 (32 Pts)" [ref=e273]:
+                      - text: Rp 11.200
+                      - generic [ref=e274]: (32 Pts)
+                    - cell "Terverifikasi" [ref=e275]
+                  - row [ref=e277]:
+                    - cell "#SET-9498A9" [ref=e278]
+                    - cell "Ahmad Fauzi" [ref=e279]
+                    - cell "Besi & Logam" [ref=e280]
+                    - cell "11.8 Kg" [ref=e281]
+                    - cell "Rp 49.560 (118 Pts)" [ref=e282]:
+                      - text: Rp 49.560
+                      - generic [ref=e283]: (118 Pts)
+                    - cell "Terverifikasi" [ref=e284]
+          - generic [ref=e287]:
+            - generic [ref=e288]:
+              - generic [ref=e293]:
+                - heading "Harga Beli Sampah Terkini" [level=3] [ref=e294]
+                - paragraph [ref=e295]: Update harian patokan harga pasar
+              - generic [ref=e296]: Live
+            - generic [ref=e297]:
+              - generic [ref=e298]:
+                - generic [ref=e305]:
+                  - generic [ref=e306]: PET Botol Bening
+                  - generic [ref=e307]: Botol & gelas bersih
+                - generic [ref=e308]:
+                  - text: Rp 3.500
+                  - generic [ref=e309]: / kg (10 Poin)
+              - generic [ref=e310]:
+                - generic [ref=e317]:
+                  - generic [ref=e318]: Kardus Kering
+                  - generic [ref=e319]: Dupleks cokelat kering
+                - generic [ref=e320]:
+                  - text: Rp 1.800
+                  - generic [ref=e321]: / kg (5 Poin)
+              - generic [ref=e322]:
+                - generic [ref=e329]:
+                  - generic [ref=e330]: Besi & Logam
+                  - generic [ref=e331]: Aluminium & Besi
+                - generic [ref=e332]:
+                  - text: Rp 4.200
+                  - generic [ref=e333]: / kg (15 Poin)
+            - link "Atur Harga Kategori Sampah →" [ref=e334] [cursor=pointer]:
+              - /url: /admin/kategori-sampah
+  - button "Open Next.js Dev Tools" [ref=e340] [cursor=pointer]

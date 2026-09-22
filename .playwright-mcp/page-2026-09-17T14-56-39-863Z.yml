@@ -1,0 +1,151 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "EcoPayard Bank Sampah Digital" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9]:
+            - generic [ref=e10]: EcoPayard
+            - generic [ref=e11]: Bank Sampah Digital
+        - navigation [ref=e12]:
+          - link "Beranda" [ref=e13] [cursor=pointer]:
+            - /url: "#beranda"
+          - link "Layanan" [ref=e14] [cursor=pointer]:
+            - /url: "#layanan"
+          - link "Katalog Sampah" [ref=e15] [cursor=pointer]:
+            - /url: /nasabah/kategori-sampah
+          - link "Setup Tenant" [ref=e16] [cursor=pointer]:
+            - /url: /setup
+          - link "Setor Sekarang" [ref=e17] [cursor=pointer]:
+            - /url: /login
+        - generic [ref=e18]:
+          - link "Masuk" [ref=e19] [cursor=pointer]:
+            - /url: /login
+          - link "Daftar" [ref=e20] [cursor=pointer]:
+            - /url: /register
+    - main [ref=e21]:
+      - generic [ref=e22]:
+        - generic: Timbangan Digital Presisi Terintegrasi
+        - generic [ref=e23]:
+          - heading "Ubah Sampah Jadi Berkah, & Poin Hadiah" [level=1] [ref=e24]:
+            - text: Ubah Sampah Jadi Berkah,
+            - generic [ref=e25]: "& Poin Hadiah"
+          - paragraph [ref=e26]: Platform pengelolaan sampah daur ulang berbasis digital untuk lingkungan sekolah dan masyarakat yang lebih asri, bernilai ekonomis, dan berkelanjutan.
+      - generic [ref=e29]:
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: Open Account / Buka Akun
+          - heading "Pilih Portal Berdasarkan Kebutuhan Anda" [level=2] [ref=e33]
+        - generic [ref=e34]:
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - generic [ref=e39]: Nasabah & Edukasi
+              - heading "For persons" [level=3] [ref=e40]
+              - paragraph [ref=e41]: Tabung sampah kering Anda, pantau riwayat setor kilat, kumpulkan poin eco-reward, dan tukar langsung dengan hadiah sembako atau voucher.
+            - generic [ref=e43]:
+              - generic [ref=e44]:
+                - generic [ref=e45]:
+                  - generic [ref=e46]: ECO PASS
+                  - generic [ref=e47]: "ID: 8821 0092"
+                - generic [ref=e48]:
+                  - generic [ref=e49]: Saldo Poin Hijau
+                  - generic [ref=e50]: 2.450 Pts
+              - generic [ref=e52]:
+                - generic [ref=e53]: Plastik • Kertas • Logam
+                - generic [ref=e54]: Terverifikasi
+            - generic [ref=e55]:
+              - link "Masuk Nasabah" [ref=e56] [cursor=pointer]:
+                - /url: /login
+              - link "⚡ Daftar 1 Menit via NISN / NIK" [ref=e57] [cursor=pointer]:
+                - /url: /register
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - generic [ref=e62]: Admin & Mitra Daur Ulang
+              - heading "For business" [level=3] [ref=e63]
+              - paragraph [ref=e64]: Kelola timbang sampah fisik, verifikasi setor, manajemen nasabah, dan rekapitulasi tonase bulanan unit Anda.
+            - generic [ref=e67]:
+              - generic [ref=e68]:
+                - generic [ref=e69]: TOTAL TONASE
+                - generic [ref=e70]: REAL-TIME
+              - generic [ref=e71]: 12.840 Kg
+              - generic [ref=e72]: "Scale ID: #UNIT-JKT-04"
+            - generic [ref=e73]:
+              - link "Portal Pengelola" [ref=e74] [cursor=pointer]:
+                - /url: /login
+              - link "📋 Kelola Timbangan & Logistik" [ref=e75] [cursor=pointer]:
+                - /url: /register
+      - generic [ref=e78]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: Statistik Dampak Nyata
+          - heading "Dampak Nyata Bersama Kami" [level=3] [ref=e82]
+          - paragraph [ref=e83]: Pencatatan transparan seluruh setoran dan emisi daur ulang secara digital di unit bank sampah.
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - generic [ref=e91]: 0 kg
+            - generic [ref=e92]: Kg Sampah Terkumpul
+          - generic [ref=e93]:
+            - generic [ref=e100]: 0 Poin
+            - generic [ref=e101]: Poin Hadiah Beredar
+          - generic [ref=e102]:
+            - generic [ref=e111]: "0"
+            - generic [ref=e112]: Transaksi Setor
+          - generic [ref=e113]:
+            - generic [ref=e119]: "0"
+            - generic [ref=e120]: Hadiah Ditukarkan
+      - generic [ref=e121]:
+        - generic [ref=e123]:
+          - text: Proses Cepat & Praktis
+          - heading "Bagaimana Alur Bank Sampah Bekerja?" [level=2] [ref=e124]
+          - paragraph [ref=e125]: Empat langkah mudah dari pemilahan sampah rumah tangga hingga penukaran poin berharga.
+        - generic [ref=e126]:
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e130]: "01"
+              - heading "Pilah Sampah" [level=4] [ref=e131]
+              - paragraph [ref=e132]: Pisahkan sampah anorganik (plastik, kertas kardus, kaleng logam) dalam kondisi bersih dan kering.
+            - generic [ref=e133]: Mulai pemilahan
+          - generic [ref=e137]:
+            - generic [ref=e138]:
+              - generic [ref=e139]: "02"
+              - heading "Ajukan Setoran" [level=4] [ref=e140]
+              - paragraph [ref=e141]: Pilih jenis kategori sampah melalui dashboard nasabah dan dapatkan kode tiket timbang digital.
+            - generic [ref=e142]: Input pengajuan
+          - generic [ref=e146]:
+            - generic [ref=e147]:
+              - generic [ref=e148]: "03"
+              - heading "Timbang & Verifikasi" [level=4] [ref=e149]
+              - paragraph [ref=e150]: Bawa sampah ke unit bank sampah terdekat untuk ditimbang secara akurat oleh petugas admin.
+            - generic [ref=e151]: Verifikasi admin
+          - generic [ref=e155]:
+            - generic [ref=e156]:
+              - generic [ref=e157]: "04"
+              - heading "Klaim Poin Reward" [level=4] [ref=e158]
+              - paragraph [ref=e159]: Poin otomatis masuk ke saldo. Tukar menjadi sembako, tabungan tunai, atau voucher belanja.
+            - generic [ref=e160]: Tukar hadiah
+      - generic [ref=e165]:
+        - generic [ref=e166]: Ekosistem Bersih, Transparan, & Berkelanjutan
+        - heading "Siap Memulai Langkah Hijau Anda?" [level=2] [ref=e170]
+        - paragraph [ref=e171]: Daftarkan sekolah, instansi, atau lingkungan RT Anda sekarang dan nikmati ekosistem bank sampah tanpa ribet.
+        - generic [ref=e172]:
+          - link "Buat Akun Gratis Sekarang" [ref=e173] [cursor=pointer]:
+            - /url: /register
+          - link "Atur Tenant / App Key" [ref=e174] [cursor=pointer]:
+            - /url: /setup
+    - contentinfo [ref=e175]:
+      - generic [ref=e176]:
+        - generic [ref=e177]:
+          - generic [ref=e178]: ♻
+          - generic [ref=e179]: EcoPayard
+          - generic [ref=e180]: "| Bank Sampah Digital Indonesia"
+        - generic [ref=e181]:
+          - link "Setup Tenant" [ref=e182] [cursor=pointer]:
+            - /url: /setup
+          - link "Katalog Sampah" [ref=e183] [cursor=pointer]:
+            - /url: /nasabah/kategori-sampah
+          - link "Portal Masuk" [ref=e184] [cursor=pointer]:
+            - /url: /login
+          - link "Registrasi Akun" [ref=e185] [cursor=pointer]:
+            - /url: /register
+      - generic [ref=e186]:
+        - paragraph [ref=e187]: © 2026 Bank Sampah Digital EcoPayard. Seluruh hak cipta dilindungi.
+        - paragraph [ref=e188]: Mendukung target pengurangan sampah nasional terukur dan berkelanjutan.
+  - button "Open Next.js Dev Tools" [ref=e194] [cursor=pointer]

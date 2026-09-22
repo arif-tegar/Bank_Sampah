@@ -1,0 +1,7 @@
+[     400ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     433ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     768ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://learn.smktelkom-mlg.sch.id/bank_sampah/api/v1/setor-sampah/admin/list?status=selesai:0
+[     769ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://learn.smktelkom-mlg.sch.id/bank_sampah/api/v1/setor-sampah/admin/list?status=menunggu_konfirmasi:0
+[     812ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://learn.smktelkom-mlg.sch.id/bank_sampah/api/v1/setor-sampah/admin/list?status=selesai:0
+[     812ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://learn.smktelkom-mlg.sch.id/bank_sampah/api/v1/setor-sampah/admin/list?status=menunggu_konfirmasi:0
+[     964ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:3000/login:0

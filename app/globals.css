@@ -1,26 +1,171 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --background: #faf8ff;
+  --foreground: #131b2e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html, body {
+  color-scheme: light !important;
+  background-color: #faf8ff !important;
+  color: var(--foreground) !important;
+  font-family: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero-bg-pattern {
+  background-color: #27bf79;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1.4px, transparent 1.4px);
+  background-size: 24px 24px;
+}
+
+.card-shadow-lift {
+  box-shadow: 0 24px 48px -12px rgba(16, 185, 129, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-shadow-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 32px 64px -16px rgba(16, 185, 129, 0.22);
+}
+
+.isometric-tilt {
+  transform: rotateX(25deg) rotateY(-18deg) rotateZ(10deg);
+  transform-style: preserve-3d;
+}
+
+/* 3D Animations & Keyframes */
+@keyframes float3d {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+
+  50% {
+    transform: translateY(-16px) rotateX(6deg) rotateY(-8deg);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes floatReverse3d {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotateX(0deg) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translateY(14px) rotateX(-5deg) rotateZ(4deg);
+  }
+}
+
+@keyframes pulseGlowSlow {
+
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes shimmerPass {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-float-3d {
+  animation: float3d 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float3d 7s ease-in-out 1.5s infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse3d 8s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: pulseGlowSlow 4s ease-in-out infinite;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.translate-z-20 {
+  transform: translateZ(20px);
+}
+
+.translate-z-40 {
+  transform: translateZ(40px);
+}
+
+.translate-z-60 {
+  transform: translateZ(60px);
+}
+
+/* Print Stylesheet for Official Receipts & Struk */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  header,
+  aside,
+  nav,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .receipt-card {
+    box-shadow: none !important;
+    border: 1px dashed #666 !important;
+    border-radius: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    page-break-inside: avoid;
+  }
 }

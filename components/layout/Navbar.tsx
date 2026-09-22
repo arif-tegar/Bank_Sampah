@@ -9,7 +9,6 @@ import { api } from '@/lib/api-client';
 import {
   Menu,
   Search,
-  Bell,
   CheckCircle2,
   Leaf,
   LogOut,
@@ -129,14 +128,6 @@ export function Navbar({ onToggleSidebar }: { onToggleSidebar?: () => void }) {
           </button>
         )}
 
-        {/* Notification Bell with red indicator */}
-        <button
-          aria-label="Notifikasi"
-          className="relative w-10 h-10 rounded-full bg-slate-50 hover:bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:text-slate-900 transition-colors cursor-pointer shadow-2xs"
-        >
-          <Bell className="w-4 h-4" />
-          <span className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-rose-500 ring-2 ring-white" />
-        </button>
 
         {/* User Circular Avatar - Click to Profil Unit */}
         {isDashboard && (
